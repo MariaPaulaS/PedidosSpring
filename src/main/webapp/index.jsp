@@ -11,7 +11,7 @@
             Cliente: <input type="text" name="idCliente" value="1"/> <br/>
             Producto: <input type="text" name="idProducto" value="1"/> <br/>
             Cantidad a pedir : <input type="text" name="unidades" value="1"/> <br/>
-            <input type="submit" value="pedir">
+            <input type="submit" value="Pedir">
         </form>
     </body>
 </html>
