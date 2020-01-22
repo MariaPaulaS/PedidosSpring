@@ -6,11 +6,11 @@ import org.springframework.stereotype.Service;
 import es.ua.jtech.spring.PedidosException;
 import es.ua.jtech.spring.datos.IPedidosDAO;
 
-@Service
+//@Service
 public class PedidosBOSimple implements IPedidosBO {
 	
 	
-	private static int cantidadMaxima = 50; 
+	private int cantidadMaxima; 
 	
 	@Autowired
 	private IPedidosDAO iPedidosDAO;
@@ -48,6 +48,9 @@ public class PedidosBOSimple implements IPedidosBO {
 
 
 	public void setCantidadMaxima(int cantidadMaxima) {
+		
+		
+		System.out.println("Dándole valor a la cantidad máxima...");
 		this.cantidadMaxima = cantidadMaxima;
 	}
 
