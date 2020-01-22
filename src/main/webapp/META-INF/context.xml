@@ -3,4 +3,13 @@
     <Resource name="jdbc/pedidosDS" auth="Container" type="javax.sql.DataSource"
     username="root" password="expertojava" driverClassName="com.mysql.jdbc.Driver"
     url="jdbc:mysql://localhost/spring" maxActive="8" maxIdle="4"/>
+    
+  <!--Cambio para utilizar el JDNI como conexion al DataSource-->
+
+ <ResourceLink name="spring"
+   global="jdbc/spring"
+   type="javax.sql.DataSource"/>
+   
+    
+
 </Context>

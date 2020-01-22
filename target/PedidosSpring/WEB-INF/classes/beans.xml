@@ -9,6 +9,16 @@
 		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd">
 
 
-<context:component-scan base-package="es.ua.jtech"></context:component-scan>
+	<context:component-scan
+		base-package="es.ua.jtech"></context:component-scan>
+
+	<jee:jndi-lookup id="dataSource"
+		jndi-name="java:comp/env/spring" resource-ref="true"
+		expected-type="javax.sql.DataSource" />
+
+	<bean id="spring"
+		class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/spring" />
+	</bean>
 
 </beans>

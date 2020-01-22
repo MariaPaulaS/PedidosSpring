@@ -1,14 +1,19 @@
 package es.ua.jtech.spring.negocio;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import es.ua.jtech.spring.PedidosException;
+import es.ua.jtech.spring.datos.IPedidosDAO;
 
 @Service
 public class PedidosBOSimple implements IPedidosBO {
 	
 	
 	private static int cantidadMaxima = 50; 
+	
+	@Autowired
+	private IPedidosDAO iPedidosDAO;
 
 	public PedidosBOSimple() {
 	
@@ -26,8 +31,13 @@ public class PedidosBOSimple implements IPedidosBO {
 		}
 		
 		else {
+			iPedidosDAO.insertarPedido(idCliente, idProducto, unidades);
 			System.out.println("Pedido realizado");
 		}
+		
+		
+
+		
 		
 	}
 
